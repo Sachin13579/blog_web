@@ -1,0 +1,29 @@
+.Header {
+
+  color: #1c1b1b;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: padding 0.3s ease, box-shadow 0.3s ease;
+  background-color: azure;
+}
+
+.Header.collapsed {
+  padding: 10px;
+
+  box-shadow: none;
+
+}
+
+.Header-title {
+  margin: 0;
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.Header-title:hover {
+  color: #f8f9fa;
+}

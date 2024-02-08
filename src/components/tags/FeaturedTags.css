@@ -1,0 +1,16 @@
+.tag-containers {
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    align-items: center;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.tag-containers button {
+    margin: 0 20px;
+}
+.tag-containers button:hover {
+    cursor: pointer;
+}
