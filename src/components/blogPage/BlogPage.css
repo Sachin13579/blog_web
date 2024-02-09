@@ -1,0 +1,26 @@
+.blog-page-container {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.blog-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.blog-date {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.blog-image {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.blog-description {
+    font-size: 16px;
+    line-height: 1.5;
+}

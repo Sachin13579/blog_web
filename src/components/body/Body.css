@@ -97,6 +97,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin-top: 10PX;
     height: 90%;
+    overflow-y: hidden;
 }
 
 .blog-text-container h5 {
@@ -112,14 +113,24 @@
     margin-bottom: 10px;
 }
 
+.demo {
+    overflow-y: hidden;
+    max-height: 100px;
+}
+.blog-page-container a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent */
+}
+
 .blog-text-container p {
     font-size: 16px;
     line-height: 1.5;
     margin: 0;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 3;
     overflow: hidden;
     text-overflow: ellipsis;
+
 
 }

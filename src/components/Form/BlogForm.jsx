@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 import './blog.css';
@@ -10,6 +11,8 @@ const BlogForm = ({ onClose }) => {
     const [selectedTagIds, setSelectedTagIds] = useState([]);
     const [filteredTags, setFilteredTags] = useState([]);
     const [tags, setTags] = useState([]);
+    const navigate = useNavigate();
+
 
     const handleClose = () => {
         onClose();
@@ -46,7 +49,9 @@ const BlogForm = ({ onClose }) => {
                 }
             });
 
-            onClose();
+            onClose()
+            navigate('/body')
+
         } catch (error) {
             console.error('Error creating blog:', error);
         }
@@ -70,6 +75,7 @@ const BlogForm = ({ onClose }) => {
         const updatedFilteredTags = filteredTags.filter(tag => tag?._id !== tagId);
         setFilteredTags(updatedFilteredTags);
     };
+    
 
     return (
         <div className="blog-form-container">
@@ -134,6 +140,7 @@ const BlogForm = ({ onClose }) => {
                 </div>
             </form >
         </div >
+
     );
 };
 
