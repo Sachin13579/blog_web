@@ -11,6 +11,27 @@
 .tag-containers button {
     margin: 0 20px;
 }
+
 .tag-containers button:hover {
     cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+    .tag-containers {
+        flex-wrap: wrap;
+        /* Ensure tags wrap to the next line */
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        /* Adjusted padding for smaller screens */
+    }
+
+    .tag-containers button {
+        margin: 5px;
+        /* Adjust margin for spacing between buttons */
+        font-size: 12px;
+        /* Adjust font size for small screens */
+        padding: 4px 8px;
+        /* Adjust padding for smaller buttons */
+    }
 }

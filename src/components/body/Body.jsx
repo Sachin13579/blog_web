@@ -7,6 +7,7 @@ import Pagination from '../pagination/PaginationUI';
 import dateFormatter from '../../utils/dateFormater.js';
 import FeaturedTags from '../tags/FeaturedTags.jsx';
 import { Link } from 'react-router-dom';
+import ShimmerUI from '../ShimmerUI/ShimmerUI.jsx';
 
 const Body = () => {
     const [blogs, setBlogs] = useState([]);
@@ -21,7 +22,7 @@ const Body = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`https://zany-ruby-squid-belt.cyclic.app/api/v1/blog/fetchBlog?pageNo=${currentPage}&limit=5&searchText=${searchTextInput}&tagIdFilter=${tagFilter}`);
+                const response = await axios.get(`https://zany-ruby-squid-belt.cyclic.app/api/v1/blog/fetchBlog?pageNo=${currentPage}&limit=6&searchText=${searchTextInput}&tagIdFilter=${tagFilter}`);
                 setBlogs(response?.data?.data?.feedData);
                 setTotalPages(Math.ceil(response?.data?.data?.pageCount / 5));
                 setLoading(false);
@@ -61,7 +62,8 @@ const Body = () => {
                 setShowForm(false)
             }} />}
             {loading ? (
-                <p>Loading...</p>
+                // <p>Loading...</p>
+                <ShimmerUI />
             ) : (
                 <ul className="blog-list">
                     {blogs.map(blog => (

@@ -11,7 +11,6 @@
     background-color: #f8f9fa;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
 }
 
 .container h2 {
@@ -115,13 +114,6 @@
     margin-bottom: 10px;
 }
 
-.demo {
-    overflow-y: hidden;
-    max-height: 100px;
-}
-
-
-
 .blog-text-container p {
     font-size: 16px;
     line-height: 1.5;
@@ -133,4 +125,24 @@
     text-overflow: ellipsis;
 
 
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+    }
+
+    .container h2 {
+        margin: 10px;
+        color: #333;
+    }
+
+    .container button {
+        margin: 5px;
+        font-size: 12px;
+        padding: 8px 16px;
+    }
 }
