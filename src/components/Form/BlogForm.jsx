@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import axios from 'axios';
 
 import './blog.css';
@@ -75,7 +76,7 @@ const BlogForm = ({ onClose }) => {
         const updatedFilteredTags = filteredTags.filter(tag => tag?._id !== tagId);
         setFilteredTags(updatedFilteredTags);
     };
-    
+
 
     return (
         <div className="blog-form-container">
@@ -143,5 +144,8 @@ const BlogForm = ({ onClose }) => {
 
     );
 };
+BlogForm.propTypes={
+    onClose: PropTypes.func
+}
 
 export default BlogForm;

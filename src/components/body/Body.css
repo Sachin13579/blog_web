@@ -11,6 +11,7 @@
     background-color: #f8f9fa;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
 }
 
 .container h2 {
@@ -43,6 +44,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 20px;
+    padding: 0;
 }
 
 /* ----------------Blog card csss */
@@ -117,10 +119,8 @@
     overflow-y: hidden;
     max-height: 100px;
 }
-.blog-page-container a {
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Inherit color from parent */
-}
+
+
 
 .blog-text-container p {
     font-size: 16px;

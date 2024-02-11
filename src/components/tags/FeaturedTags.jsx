@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import './FeaturedTags.css'
 
 
@@ -7,7 +8,6 @@ const FeaturedTags = ({ onSelectTag }) => {
     const [tags, setTags] = useState([]);
     const [selectFilterTag, setSelectFilterTag] = useState('');
 
-    console.log("i am tags", tags)
     useEffect(() => {
         async function fetchTags() {
             try {
@@ -25,13 +25,19 @@ const FeaturedTags = ({ onSelectTag }) => {
 
     return (
         <div className='tag-containers'>
+            <button onClick={() => { setSelectFilterTag('') }}>All</button>
             {tags.map((e) => {
                 return (
+
                     <button key={e._id} onClick={(k) => setSelectFilterTag(e._id)}>{e.tagName}</button>
+
                 )
             })}
         </div >
     );
+};
+FeaturedTags.propTypes = {
+    onSelectTag: PropTypes.func,
 };
 
 export default FeaturedTags;
